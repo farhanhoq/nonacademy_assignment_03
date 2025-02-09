@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>JavaScript Questions</h2>
+        <div class="blog">
+            <button onclick="toggleAnswer('answer1')">1. What is the difference between let, const, and var in
+                JavaScript?</button>
+            <p id="answer1" style="display: none;">In JavaScript,let is block-scoped and cannot be re-declared within the same scope. const is also block-scoped butbits value cannot be reassigned after
+            declaration. var is function-scoped and can be re-declared.
+            </p>
+        </div>
+        <div class="blog">
+            <button onclick="toggleAnswer('answer2')">2. What is the difference between find() and filter()
+                method?</button>
+            <p id="answer2" style="display: none;">The find() method returns the first element in an array
+                that according to the condition, while filter() returns an array of all elements that match the
+                condition.</p>
+        </div>
+        <div class="blog">
+            <button onclick="toggleAnswer('answer3')">3. How do you select an element in the DOM using JavaScript? Name
+                a few methods.</button>
+            <p id="answer3" style="display: none;">To select elements in the DOM, following methods can be used: 
+                document.getElementById(), document.querySelector(), and
+                document.getElementsByClassName().
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Multiplication Table Generator. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
